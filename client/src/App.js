@@ -134,7 +134,7 @@ const Grid = styled.div`
   display: grid;
   padding-top: 10%;
   padding-left: 15%;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: 30% 30% 30%;
 `;
 const One = styled.div`
   position: relative;
