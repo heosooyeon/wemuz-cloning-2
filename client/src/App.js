@@ -75,9 +75,9 @@ const Header_Text = styled.div`
 
 const Middle = styled.div`
   padding-top: 10%;
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-bottom: 150px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
   display: flex;
   justify-content: space-around;
 `;
