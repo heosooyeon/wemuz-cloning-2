@@ -8,20 +8,20 @@ function Top() {
     <Block>
       <Header>
         <MainText>뮤커톤</MainText>
-        <Header_Text>세상에 없던 나의 첫 음악<br></br>함께 즐기면서 경험하는 음악 협업 프로젝트</Header_Text>
+        <HeaderText>세상에 없던 나의 첫 음악<br></br>함께 즐기면서 경험하는 음악 협업 프로젝트</HeaderText>
       </Header>
        <Middle>
-        <Wrt>
-          <Wrt1>What is</Wrt1>
-          <Wrt2>Mukathon?</Wrt2>
-          <Wrt3>뮤커톤은 음악을 즐기고 싶은 일반인들을 대상으로<br></br>전문가들의 가이드를 통해 정해진 기간 내에 팀을 구성하여<br></br>커버곡 또는 자작곡을 완성하고 앨범 제작 및 공연까지<br></br>진행하는 음악 협업 경험 프로젝트입니다.</Wrt3>
-        </Wrt>
+        <IntroText>
+          <IntroText1>What is</IntroText1>
+          <IntroText2>Mukathon?</IntroText2>
+          <IntroText3>뮤커톤은 음악을 즐기고 싶은 일반인들을 대상으로<br></br>전문가들의 가이드를 통해 정해진 기간 내에 팀을 구성하여<br></br>커버곡 또는 자작곡을 완성하고 앨범 제작 및 공연까지<br></br>진행하는 음악 협업 경험 프로젝트입니다.</IntroText3>
+        </IntroText>
           <ReactPlayer url={'https://youtu.be/trE4htAzay8'} width={'570px'} height={'320px'}></ReactPlayer>
        </Middle>
-      <Bottom>
-          <Bottom_Title>뮤커톤만의 혜택</Bottom_Title>
-      </Bottom>
-      <Grid>
+      <BenefitsHeader>
+          <BottomTitle>뮤커톤만의 혜택</BottomTitle>
+      </BenefitsHeader>
+      <BenefitsDetails>
       <One>
         <Num>01</Num>
         <Title>다른 뮤지션과 함께 경험하는<br></br>음악 협업</Title>
@@ -37,13 +37,12 @@ function Top() {
         <Title>잊지 못할 추억을<br></br>간직할 수 있는 굿즈까지</Title>
         <Text>녹음한 공연 곡과 공연 영상을 함께 편집한<br></br>영상 앨범부터 뮤커톤 참가 기념 굿즈까지<br></br>뮤커톤을 통해 만난 값진 추억을 선물로 드립니다.</Text>
       </Three>
-      </Grid>
-      
-      
-      
+      </BenefitsDetails>
     </Block>
     );
 }
+
+
 const Block = styled.main`
 
 `;
@@ -56,6 +55,10 @@ const Header= styled.div`
     background-size: cover;
     background-position: center;
     text-align: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items:center;
+    }
 `;
 
 const MainText = styled.div`
@@ -65,7 +68,7 @@ const MainText = styled.div`
     font-weight: bold;
 `;
 
-const Header_Text = styled.div`
+const HeaderText = styled.div`
   padding-top: 1%;
   text-align: center;
   color:white;
@@ -80,27 +83,36 @@ const Middle = styled.div`
   padding-bottom: 10%;
   display: flex;
   justify-content: space-around;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+	align-content: stretch;
+  }
 `;
-const Wrt = styled.div`
+const IntroText = styled.div`
   padding-top: 3%;
 `;
-const Wrt1 = styled.div`
+const IntroText1 = styled.div`
   color:#785FFA;
   font-weight: lighter;
   font-size: 40px;
 `;
-const Wrt2 = styled.div`
+const IntroText2 = styled.div`
   color:#785FFA;
   font-weight: normal;
   font-size: 40px;
 `;
-const Wrt3 = styled.div`
+const IntroText3 = styled.div`
   padding-top: 5%;
   color:#808080;
   font-weight: lighter;
   font-size: 16px;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+	  align-content: stretch;
+    padding-bottom: 10%;
+  }
 `;
-const Bottom=styled.div`
+const BenefitsHeader = styled.div`
   width: 95%;
   height: 250px;
   background-image: url(${botImg});
@@ -108,8 +120,12 @@ const Bottom=styled.div`
   background-size: cover;
   margin: auto;
   text-align: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items:center;
+  }
 `;
-const Bottom_Title=styled.div`
+const BottomTitle=styled.div`
   padding-top: 7%;
   color:white;
   font-size: 40px;
@@ -118,31 +134,56 @@ const Num = styled.div`
   color: #D3D3D3;
   font-size: 80px;
   position: absolute;
+  @media (max-width: 768px) {
+    position: absolute;
+  }
 `;
 const Title = styled.div`
   position: absolute;
   top: 35%;
   line-hight:5px;
   font-size: 20px;
+  @media (max-width: 768px) {
+    position: absolute;
+    line-height: 20px;
+    top: 25%;
+  }
 `;
 const Text = styled.div`
   padding-top: 35%;
   color: #808080;
   font-size: 13px;
+  @media (max-width: 768px) {
+    padding-top: 120%;
+  }
 `;
-const Grid = styled.div`
+const BenefitsDetails = styled.div`
   display: grid;
   padding-top: 10%;
   padding-left: 15%;
   grid-template-columns: 30% 30% 30%;
+  @media (max-width: 768px) {
+    display: grid;
+    padding-left: 40%;
+    grid-template-columns: 30%;
+  }
 `;
 const One = styled.div`
   position: relative;
+  @media (max-width: 768px) {
+    position: relative;   
+  }
 `;
 const Two = styled.div`
-position: relative;
+  position: relative;
+  @media (max-width: 768px) {
+    position: relative;   
+  }
 `;
 const Three = styled.div`
-position: relative;
+  position: relative;
+  @media (max-width: 768px) {
+    position: relative;   
+  } 
 `;
 export default Top;
